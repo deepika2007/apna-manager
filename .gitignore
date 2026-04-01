@@ -1,0 +1,24 @@
+# Frontend (Node.js/Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Backend (Python)
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.pytest_cache/
+backend/data/
+
+# Environment Variables
+.env
+.env.*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

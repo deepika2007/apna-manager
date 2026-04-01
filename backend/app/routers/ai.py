@@ -55,8 +55,7 @@ async def parse_audio(
         import os
         os.remove(temp_path)
 
-        # Parse with LLM
-        system_prompt = \"\"\"
+        system_prompt = """
         You are an AI assistant for an Expense & Todo Manager application. 
         Extract the task/expense details from the given text transcription.
         Respond ONLY in a valid JSON format with the following keys:
@@ -64,7 +63,7 @@ async def parse_audio(
         - "description" (string or null)
         - "amount" (float, default to 0.0 if not mentioned)
         - "action" (string: either "create_plan" or "create_task")
-        \"\"\"
+        """
 
         response = client.chat.completions.create(
             model="gpt-4o-mini",
