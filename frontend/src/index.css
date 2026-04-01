@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-900: #1e3a8a;
+
+  --color-dark-bg: #0f172a;
+  --color-dark-surface: #1e293b;
+  --color-dark-border: #334155;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-slate-100 antialiased selection:bg-brand-500/30 font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg bg-dark-surface px-4 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-dark-border hover:bg-slate-700 transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .input-field {
+    @apply block w-full rounded-lg border-0 bg-dark-surface/50 py-2.5 px-3 text-white shadow-sm ring-1 ring-inset ring-dark-border focus:ring-2 focus:ring-inset focus:ring-brand-500 sm:text-sm sm:leading-6 placeholder:text-slate-400 transition-colors;
+  }
+  .card {
+    @apply bg-dark-surface rounded-xl border border-dark-border shadow-lg p-6;
+  }
+}
+
+/* Glassmorphism utilities */
+.glass {
+  @apply bg-dark-surface/70 backdrop-blur-md border border-dark-border/50;
+}
