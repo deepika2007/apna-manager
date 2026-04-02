@@ -4,9 +4,10 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 # Fallback to SQLite if Postgres URL is not provided in env for ease of development
 # But user requested Postgres so we default to standard local test URL if missing
+
 SQLALCHEMY_DATABASE_URL = os.getenv(
     "DATABASE_URL", 
-    "postgresql://postgres:postgres@localhost/apna_manager"
+    "postgresql://postgres:1234@localhost:5432/postgres"
 )
 
 # Use SQLite for fallback if connection to postgres fails initially
