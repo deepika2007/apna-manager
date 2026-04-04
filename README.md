@@ -35,3 +35,37 @@ Apna Manager - Task Breakdown
  Test Audio processing pipeline
  Test AI insights functionality
  Ensure UI is responsive and premium
+
+
+📂 Project Structure Overview
+
+apna-manager/
+├── backend/
+│   ├── main.py                # FastAPI Application entry point
+│   ├── alembic.ini            # Database migration settings
+│   └── app/
+│       ├── database.py        # SQLAlchemy engine and Postgres connection string
+│       ├── models.py          # Database schemas for User, Plan, and Task
+│       ├── schemas.py         # Pydantic validation schemas for API requests
+│       ├── auth_utils.py      # JWT and Bcrypt utilities
+│       └── routers/           # Individual API Controllers
+│           ├── auth.py        
+│           ├── plans.py       
+│           ├── tasks.py      
+│           ├── analytics.py   
+│           └── ai.py          
+└── frontend/
+    ├── vite.config.ts         # Vite configuration with Tailwind v4 plugin
+    ├── package.json           
+    └── src/
+        ├── api.ts             # Axios configuration containing Auth Token Interceptors
+        ├── index.css          # Tailwind CSS layer definitions and custom utility classes
+        ├── App.tsx            # Main Application routing definition
+        ├── components/        
+        └── pages/             # All main UI views
+            ├── Login.tsx
+            ├── Register.tsx
+            ├── Dashboard.tsx
+            ├── PlanView.tsx
+            └── Analytics.tsx
+
