@@ -36,36 +36,37 @@ Apna Manager - Task Breakdown
  Test AI insights functionality
  Ensure UI is responsive and premium
 
+## 📁 Project Structure
 
-📂 Project Structure Overview
-
+```
 apna-manager/
 ├── backend/
-│   ├── main.py                # FastAPI Application entry point
-│   ├── alembic.ini            # Database migration settings
+│   ├── main.py              # FastAPI entry point
+│   ├── alembic.ini          # Database migration config
 │   └── app/
-│       ├── database.py        # SQLAlchemy engine and Postgres connection string
-│       ├── models.py          # Database schemas for User, Plan, and Task
-│       ├── schemas.py         # Pydantic validation schemas for API requests
-│       ├── auth_utils.py      # JWT and Bcrypt utilities
-│       └── routers/           # Individual API Controllers
-│           ├── auth.py        
-│           ├── plans.py       
-│           ├── tasks.py      
-│           ├── analytics.py   
-│           └── ai.py          
-└── frontend/
-    ├── vite.config.ts         # Vite configuration with Tailwind v4 plugin
-    ├── package.json           
-    └── src/
-        ├── api.ts             # Axios configuration containing Auth Token Interceptors
-        ├── index.css          # Tailwind CSS layer definitions and custom utility classes
-        ├── App.tsx            # Main Application routing definition
-        ├── components/        
-        └── pages/             # All main UI views
-            ├── Login.tsx
-            ├── Register.tsx
-            ├── Dashboard.tsx
-            ├── PlanView.tsx
-            └── Analytics.tsx
-
+│       ├── database.py      # PostgreSQL connection setup
+│       ├── models.py        # SQLAlchemy models
+│       ├── schemas.py       # Pydantic schemas
+│       ├── auth_utils.py    # JWT authentication utilities
+│       └── routers/
+│           ├── auth.py
+│           ├── plans.py
+│           ├── tasks.py
+│           ├── analytics.py
+│           └── ai.py
+│
+├── frontend/
+│   ├── vite.config.ts       # Vite configuration
+│   ├── package.json
+│   └── src/
+│       ├── api.ts           # Axios config with interceptors
+│       ├── index.css        # Tailwind CSS styles
+│       ├── App.tsx          # Main routing setup
+│       ├── components/      # Reusable UI components
+│       └── pages/
+│           ├── Login.tsx
+│           ├── Register.tsx
+│           ├── Dashboard.tsx
+│           ├── PlanView.tsx
+│           └── Analytics.tsx
+```
